@@ -3,7 +3,7 @@ import './style.css';
 
 // import the required functions from module
 import {
-  getMealData, populatedishes, addLike, getLikesData, diplayLikes,
+  getMealData, populatedishes, addLike, getLikesData, diplayLikes, counter, diplayNumberOfItems,
 } from './modules/functions.js';
 
 // Getting data from the theMealDB API
@@ -14,6 +14,10 @@ const likesData = await getLikesData();
 
 // Populating items in the home page
 populatedishes(mealData);
+
+// Getting and diplaying the number of items
+const nbOfItems = await counter();
+diplayNumberOfItems(nbOfItems);
 
 // Diplaying likes data in the home page
 mealData.forEach((element) => {

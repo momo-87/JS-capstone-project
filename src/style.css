@@ -7,6 +7,7 @@
 
 body {
   background-color: #d3d3d3;
+  font-size: 1rem;
 }
 
 .flex-column {
@@ -39,7 +40,7 @@ button:hover,
   }
 
   .logo-box {
-    width: 40%;
+    width: 30%;
   }
 
   .logo {
@@ -47,13 +48,18 @@ button:hover,
   }
 
   ul {
-    width: 57%;
+    width: 65%;
     column-gap: 5%;
   }
 
+  ul li:nth-child(1) {
+    text-decoration: underline;
+    color: #ffffed;
+  }
+
   ul li a {
-    text-decoration: none;
     color: #2beb83;
+    text-decoration: none;
   }
 
   section.food-list {
@@ -75,6 +81,12 @@ button:hover,
 
   .image-box img {
     width: 100%;
+    border-radius: 15px;
+  }
+
+  .image-box img:hover {
+    width: 103%;
+    border-radius: 15px;
   }
 
   .meal-title-and-interactions-box {
