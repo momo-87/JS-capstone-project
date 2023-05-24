@@ -23,7 +23,7 @@ mealData.forEach((element) => {
 const foodListSection = document.querySelector('.food-list');
 foodListSection.addEventListener('click', async (e) => {
   e.preventDefault();
-  if (e.target && e.target.matches('i.like')) {
+  if (e.target && e.target.matches('i.heart')) {
     const targetId = e.target.id;
     await addLike(targetId);
     const likesData = await getLikesData();
