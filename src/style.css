@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #2f2c28;
+}
+
+body {
+  background-color: #d3d3d3;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  list-style: none;
+}
+
+button:hover,
+.heart:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 320px) {
+  header {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    position: fixed;
+    background-color: #8b4513;
+  }
+
+  .logo-box {
+    width: 40%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  ul {
+    width: 57%;
+    column-gap: 5%;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: #2beb83;
+  }
+
+  section.food-list {
+    width: 100%;
+    padding-top: 60px;
+    gap: 10px;
+  }
+
+  .food-card {
+    width: 90%;
+    justify-content: center;
+    margin: 0 5%;
+    row-gap: 30px;
+  }
+
+  .image-box {
+    width: 100%;
+  }
+
+  .image-box img {
+    width: 100%;
+  }
+
+  .meal-title-and-interactions-box {
+    margin-top: -30px;
+    justify-content: space-between;
+  }
+
+  .meal-title-and-interactions-box h2 {
+    font-size: 1.2rem;
+    width: 67%;
+  }
+
+  .meal-title-and-interactions-box span {
+    font-size: 1.1rem;
+    color: #8b4513;
+  }
+
+  .buttons-box {
+    justify-content: space-between;
+    margin-top: -20px;
+  }
+
+  button {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  header ul {
+    width: 60%;
+    column-gap: 5%;
+    margin-left: 15%;
+  }
+
+  .meal-title-and-interactions-box h2 {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  header ul {
+    width: 60%;
+    column-gap: 5%;
+    margin-left: 18%;
+  }
+
+  section.food-list {
+    padding-top: 80px;
+  }
+
+  .meal-title-and-interactions-box h2 {
+    width: 75%;
+  }
+
+  button {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    width: 90%;
+  }
+
+  header ul {
+    column-gap: 5%;
+    margin-left: 40%;
+  }
+
+  section.food-list {
+    width: 100%;
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-columns: auto auto;
+  }
+
+  button {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  section.food-list {
+    width: 100%;
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 35% 35% 35%;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  section.food-list {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  .logo-box {
+    width: 20%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  header ul {
+    column-gap: 5%;
+    margin-left: 50%;
+  }
+}
