@@ -53,15 +53,13 @@
     <li><a href="https://jestjs.io/docs/getting-started">Jest</a></li>
   </ul>
 </details>
-<!-- <details>
-  <summary>Server</summary>
+<details>
+  <summary>API</summary>
   <ul>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
-    <li><a href="https://www.javascript.com/">JavaScript</a></li>
-    <li><a href="https://www.loom.com/share/2ce37a7925314ac8a15d9b0606ca86e3">Loom video</a></li>
+    <li><a href="https://www.themealdb.com/api.php">TheMealDB</a></li>
+    <li><a href="https://microverse.notion.site/Involvement-API-869e60b5ad104603aa6db59e08150270">Involvement API</a></li>
   </ul>
-</details> -->
+</details>
 <br>
 
 ### Key Features <a name="key-features"></a>
