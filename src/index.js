@@ -4,6 +4,7 @@ import './style.css';
 // import the required functions from module
 import {
   getMealData, populatedishes, addLike, getLikesData, diplayLikes, counter, diplayNumberOfItems,
+  PopupContent,
 } from './modules/functions.js';
 
 // Getting data from the theMealDB API
@@ -25,6 +26,7 @@ mealData.forEach((element) => {
 });
 
 const foodListSection = document.querySelector('.food-list');
+// Add event listener to the like icon and comment button
 foodListSection.addEventListener('click', async (e) => {
   e.preventDefault();
   if (e.target && e.target.matches('i.heart')) {
@@ -32,5 +34,17 @@ foodListSection.addEventListener('click', async (e) => {
     await addLike(targetId);
     const likesData = await getLikesData();
     diplayLikes(likesData, targetId);
+  } else if (e.target && e.target.matches('button.comment')) {
+    const targetId = e.target.id;
+    const idMeal = targetId.replace('CBtn', '');
+    PopupContent(mealData, idMeal);
+  }
+});
+
+// Add event listener to close popup icon
+const popupWindow = document.querySelector('.popup-window');
+popupWindow.addEventListener('click', (e) => {
+  if (e.target && e.target.matches('i.close-popup')) {
+    popupWindow.innerHTML = '';
   }
 });

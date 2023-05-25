@@ -30,6 +30,7 @@ button:hover,
 }
 
 @media only screen and (min-width: 320px) {
+  /* Styling Home page start */
   header {
     width: 100%;
     justify-content: space-between;
@@ -112,6 +113,98 @@ button:hover,
   button {
     width: 30%;
   }
+
+  /* Styling Home page end */
+
+  /* Styling popup window start */
+  .popup-window {
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+
+  .popup-wrapper {
+    width: 95%;
+    position: fixed;
+    top: 10px;
+    height: 98%;
+    background-color: #d3d3d3;
+    align-items: center;
+    margin: 0 2.5% 0 2.5%;
+    border-radius: 20px;
+    z-index: 10;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    border: 2px solid #cd853f;
+  }
+
+  i.close-popup:hover {
+    cursor: pointer;
+  }
+
+  .popup-wrapper h2 {
+    font-size: 1.2rem;
+  }
+
+  h2.add-comment {
+    margin-top: 30px;
+  }
+
+  .popup-window i {
+    margin: 15px 10% 15px 90%;
+  }
+
+  .popup-image-box {
+    width: 90%;
+  }
+
+  img.popup-img {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .meal-infos {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .meal-infos span {
+    font-weight: bolder;
+  }
+
+  .instruction-box {
+    grid-column: 1 / span 2;
+    margin-top: 10px;
+    text-align: justify;
+  }
+
+  .comments-box {
+    display: flex;
+    margin-top: 30px;
+    width: 90%;
+    justify-content: center;
+  }
+
+  form.add-comment {
+    width: 90%;
+    row-gap: 5px;
+  }
+
+  input.user-name {
+    height: 25px;
+  }
+
+  textarea.insights {
+    height: 60px;
+  }
+
+  ::placeholder {
+    padding-left: 3%;
+  }
+
+  /* Styling popup window end */
 }
 
 @media only screen and (min-width: 375px) {
@@ -167,6 +260,13 @@ button:hover,
   button {
     width: 25%;
   }
+
+  /* Styling popup window start */
+  button.submit-comment {
+    width: 12%;
+  }
+
+  /* Styling popup window end */
 }
 
 @media only screen and (min-width: 1024px) {

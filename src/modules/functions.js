@@ -18,7 +18,7 @@ export const populatedishes = async (mealData) => {
                             <i id ="M${element.idMeal}" class="fa-sharp fa-solid fa-heart heart" style="color: #8b4513;"></i><span id ="L${element.idMeal}" class = "likes">0 likes</span>
                           </div>
                           <div class = "buttons-box flex-row">
-                            <button class = 'comment'>Comments</button>
+                            <button id = "CBtn${element.idMeal}" class = 'comment'>Comments</button>
                             <button class = 'Reservation'>Reservation</button>
                           </div>
                           <hr>
@@ -81,4 +81,35 @@ export const counter = async () => {
 export const diplayNumberOfItems = (nbOfItems) => {
   const li = document.querySelector('li.number-of-items');
   li.textContent = `Meals(${nbOfItems})`;
+};
+
+// Populating popup window content function
+export const PopupContent = (data, id) => {
+  const popupBox = document.querySelector('.popup-window');
+  data.forEach((element) => {
+    if (element.idMeal === id) {
+      popupBox.innerHTML = `<div class = "popup-wrapper flex-column">
+                              <i class="fa-solid fa-xmark close-popup"></i>
+                              <div class = 'popup-image-box'><img class = "popup-img" src = '${element.strMealThumb}' alt = 'meal'></div>
+                              <h2>${element.strMeal}</h2>
+                              <div class = "meal-infos">
+                                <div><span>Area:</span> ${element.strArea}</div>
+                                <div><span>Category:</span> ${element.strCategory}</div>
+                                <div class = "instruction-box"><span>Instructions:</span> ${element.strInstructions}</div>
+                              </div>
+                              <div class = "comments-box">
+                                <h2>Comments (0)</h2>
+                              </div>
+                              <h2 class = "add-comment">Add a comment</h2>
+                              <form class = "add-comment flex-column">
+                                <label for = "userName"></label>
+                                <input id = "userName" class = "user-name" type = "text", required, placeholder = "Your name">
+                                <label for = "textArea"></label>
+                                <textarea id = "textarea" class = "insights" required, placeholder = "Your insights"></textarea>
+                                <button class = "submit-comment">Comment</button>
+                              </form>
+                            </div>
+                            `;
+    }
+  });
 };
