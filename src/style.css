@@ -154,13 +154,23 @@ button:hover,
     margin: 15px 10% 15px 90%;
   }
 
+  .meal-section {
+    width: 100%;
+    align-items: center;
+  }
+
   .popup-image-box {
     width: 90%;
+    align-items: center;
   }
 
   img.popup-img {
     width: 100%;
     border-radius: 15px;
+  }
+
+  h2.meal-name {
+    margin-top: 10px;
   }
 
   .meal-infos {
@@ -191,6 +201,11 @@ button:hover,
     font-size: 0.9rem;
     margin-top: 5px;
     font-style: italic;
+  }
+
+  .add-comment-section {
+    width: 100%;
+    align-items: center;
   }
 
   form.add-comment {
@@ -289,6 +304,28 @@ button:hover,
     grid-template-columns: 35% 35% 35%;
     grid-template-columns: auto auto auto;
   }
+
+  /* Styling popup window start */
+  .meal-section {
+    width: 95%;
+    flex-direction: row;
+    column-gap: 2%;
+  }
+
+  .popup-image-box {
+    width: 40%;
+  }
+
+  .add-comment-section {
+    width: 70%;
+  }
+
+
+
+
+
+
+  /* Styling popup window end */
 }
 
 @media only screen and (min-width: 1440px) {

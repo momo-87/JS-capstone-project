@@ -90,29 +90,35 @@ export const PopupContent = (data, id) => {
     if (element.idMeal === id) {
       popupBox.innerHTML = `<div class = "popup-wrapper flex-column">
                               <i class="fa-solid fa-xmark close-popup"></i>
-                              <div class = 'popup-image-box'><img class = "popup-img" src = '${element.strMealThumb}' alt = 'meal'></div>
-                              <h2>${element.strMeal}</h2>
-                              <div class = "meal-infos">
-                                <div><span>Area:</span> ${element.strArea}</div>
-                                <div><span>Category:</span> ${element.strCategory}</div>
-                                <div class = "instruction-box"><span>Instructions:</span> ${element.strInstructions}</div>
-                              </div>
+                              <section class = "meal-section flex-column">
+                                <div class = 'popup-image-box flex-column'>
+                                  <img class = "popup-img" src = '${element.strMealThumb}' alt = 'meal'>
+                                  <h2 class = "meal-name">${element.strMeal}</h2>
+                                </div>
+                                <div class = "meal-infos">
+                                  <div><span>Area:</span> ${element.strArea}</div>
+                                  <div><span>Category:</span> ${element.strCategory}</div>
+                                  <div class = "instruction-box"><span>Instructions:</span> ${element.strInstructions}</div>
+                                </div>
+                              </section>
                               <hr>
-                              <div class = "comments-section flex-column">
+                              <section class = "comments-section flex-column">
                                 <h2 class = "comment-title">Comments (0)</h2>
                                 <div class = "comments-box flex-column"></div>
-                              </div>
+                              </section>
                               <hr>
-                              <h2 class = "add-comment">Add a comment</h2>
-                              <form class = "add-comment flex-column">
-                                <label for = "userName"></label>
-                                <input id = "userName" class = "user-name" type = "text", required, placeholder = "Your name">
-                                <p class = "user-name-error"></p>
-                                <label for = "textArea"></label>
-                                <textarea id = "textarea" class = "insights" required, placeholder = "Your insights"></textarea>
-                                <p class = "insights-error"></p>
-                                <button class = "submit-comment">Comment</button>
-                              </form>
+                              <section class = "add-comment-section flex-column">
+                                <h2 class = "add-comment">Add a comment</h2>
+                                <form class = "add-comment flex-column">
+                                  <label for = "userName"></label>
+                                  <input id = "userName" class = "user-name" type = "text", required, placeholder = "Your name">
+                                  <p class = "user-name-error"></p>
+                                  <label for = "textArea"></label>
+                                  <textarea id = "textarea" class = "insights" required, placeholder = "Your insights"></textarea>
+                                  <p class = "insights-error"></p>
+                                  <button class = "submit-comment">Comment</button>
+                                </form>
+                              </section>
                             </div>
                             `;
     }
