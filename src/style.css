@@ -180,11 +180,17 @@ button:hover,
     text-align: justify;
   }
 
-  .comments-box {
+  .comments-section {
     display: flex;
     margin-top: 30px;
     width: 90%;
     justify-content: center;
+  }
+
+  .comments-box p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-style: italic;
   }
 
   form.add-comment {
@@ -200,8 +206,14 @@ button:hover,
     height: 60px;
   }
 
+  input.user-name:focus,
+  textarea.insights:focus {
+    outline-color: #8b4513;
+    padding: 3%;
+  }
+
   ::placeholder {
-    padding-left: 3%;
+    padding-left: 2%;
   }
 
   /* Styling popup window end */

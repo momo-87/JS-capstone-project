@@ -4,7 +4,8 @@ import './style.css';
 // import the required functions from module
 import {
   getMealData, populatedishes, addLike, getLikesData, diplayLikes, counter, diplayNumberOfItems,
-  PopupContent,
+  PopupContent, errorMsg, addComment, getCommentData, populateComments, commentcounter,
+  diplayNumberOfComments,
 } from './modules/functions.js';
 
 // Getting data from the theMealDB API
@@ -26,7 +27,7 @@ mealData.forEach((element) => {
 });
 
 const foodListSection = document.querySelector('.food-list');
-// Add event listener to the like icon and comment button
+// Add event listener to the like icon and open comment button
 foodListSection.addEventListener('click', async (e) => {
   e.preventDefault();
   if (e.target && e.target.matches('i.heart')) {
@@ -38,6 +39,46 @@ foodListSection.addEventListener('click', async (e) => {
     const targetId = e.target.id;
     const idMeal = targetId.replace('CBtn', '');
     PopupContent(mealData, idMeal);
+
+    // We need to use the prefix M because we initially used it to post likes in the API
+    const itemId = targetId.replace('CBtn', 'M');
+
+    // Getting and displaying the number of comments
+    const nbComments = await commentcounter(itemId);
+    diplayNumberOfComments(nbComments);
+
+    // Get comment the corresponding comment data from the API
+    const commentData = await getCommentData(itemId);
+
+    // Populate comment data in the popup window after checking that data is not empty
+    if (commentData.length) {
+      populateComments(commentData);
+    }
+
+    // Add event listener to the submit comment button
+    const submitCommentBtn = document.querySelector('button.submit-comment');
+    submitCommentBtn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const userName = document.querySelector('input.user-name').value;
+      const insights = document.querySelector('textarea.insights').value;
+      if (!userName || !insights) {
+        errorMsg(userName, insights);
+      }
+      await addComment(itemId, userName, insights);
+      document.querySelector('input.user-name').value = '';
+      document.querySelector('textarea.insights').value = '';
+
+      // Clean the board
+      document.querySelector('div.comments-box').innerHTML = '';
+      // Gettint the updated comment data from the API and populate
+      const commentData = await getCommentData(itemId);
+      // Repopulate using the updated comment data
+      populateComments(commentData);
+
+      // Getting and displaying the number of comments
+      const nbComments = await commentcounter(itemId);
+      diplayNumberOfComments(nbComments);
+    });
   }
 });
 
