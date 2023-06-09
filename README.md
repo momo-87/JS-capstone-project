@@ -34,7 +34,7 @@
 
 <br>
 
-# 📖 Leaderboard Project <a name="API-based webapp"></a>
+# 📖 API-based Webapp <a name="API-based webapp"></a>
 > This project is about building an web application based on an external API.
 <br>
 
