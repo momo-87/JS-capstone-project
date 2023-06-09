@@ -6,6 +6,9 @@
   
   <h2><b>API-based Webapp</b></h2>
 </div>
+<div align="center">
+  <img src="./src/assets/card1.png" alt="screenshot"/>
+</div>
 
 # 📗 Table of Contents
 
@@ -65,7 +68,6 @@
 ### Key Features <a name="key-features"></a>
 - A home page showing a list of items that a user can "like."
 - A popup window with more data about an item that user can use to comment on it.
-- A popup window with more data about an item that user can use to reserve it for a period of time.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -115,8 +117,7 @@
 
 
 ## 🔭 Future Features <a name="future-features"></a>
-- [ ] Confifure linter controls.
-- [ ] Testing
+- [ ] A popup window with more data about an item that user can use to reserve it for a period of time.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
