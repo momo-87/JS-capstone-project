@@ -118,6 +118,7 @@
 
 ## 🔭 Future Features <a name="future-features"></a>
 - [ ] A popup window with more data about an item that user can use to reserve it for a period of time.
+- [ ] Reservation popup window
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
