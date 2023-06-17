@@ -4,7 +4,7 @@
   <img src="./intro.png" alt="logo"/>
   <br/>
   
-  <h2><b>API-based Webapp</b></h2>
+  <h2><b>API-based Webapp (Resraurant)</b></h2>
 </div>
 <div align="center">
   <img src="./src/assets/card1.png" alt="screenshot"/>
@@ -34,7 +34,7 @@
 
 <br>
 
-# 📖 API-based Webapp <a name="API-based webapp"></a>
+# 📖 API-based Webapp(Restaurant) <a name="API-based webapp"></a>
 > This project is about building an web application based on an external API.
 <br>
 
