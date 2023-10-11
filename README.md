@@ -7,7 +7,7 @@
   <h2><b>API-based Webapp (Resraurant)</b></h2>
 </div>
 <div align="center">
-  <img src="./src/assets/card1.png" alt="screenshot"/>
+  <img src="./src/assets/restau.png" alt="screenshot"/>
 </div>
 
 # 📗 Table of Contents
