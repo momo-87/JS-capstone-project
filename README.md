@@ -35,7 +35,7 @@
 <br>
 
 # 📖 API-based Webapp(Restaurant) <a name="API-based webapp"></a>
-> This project is about building an web application based on an external API.
+> The Restaurant web application is based on an external API. We used JavaScript to make the websites dynamic and build a basic single-page app. The application has three user interfaces: A home page showing a list of dishes that a user can "like", a popup window with more data about a dish that a user can leave a comment and a popup window with more data about a dish that a user can use to reserve it for some time.
 <br>
 
 ## 🛠 Built With <a name="built-with"></a>
